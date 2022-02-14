@@ -1,0 +1,54 @@
+{
+  "order":{
+    "orderNumber": 405560003,
+    "OrderDate": "14/02/22",
+    "orderSubtotal": 1130,
+    "delivery": "gratuite",
+    "orderPrice": 1130,
+    "payment": "visa"
+  },
+  "tracking":{
+    "step1":true,
+    "step2":true,
+    "step3":false,
+    "step4":false
+  },
+  "product":[
+    {
+      "name": "L'incroyable matelas tediber",
+      "img": "Tediber_mattress.jpg",
+      "price": "750 €",
+      "size": "160 x 200 cm",
+      "quantity": "1"
+    },
+    {
+      "name": "L'incroyable oreiller tediber",
+      "img": "Tediber_pillow.jpg",
+      "price": "85 €",
+      "size": "60 x 60 cm",
+      "quantity": "1"
+    },
+    {
+      "name": "L'incroyable couette tediber",
+      "img": "Tediber_duvet.jpg",
+      "price": "210 €",
+      "size": "240 x 220 cm",
+      "quantity": "1"
+    }
+  ],
+  "delivery":{
+    "type": "point relais",
+    "address": "57 rue Jean Pierre Timbaud",
+    "city": "Paris",
+    "postcode": 75011,
+    "EstimatedDelivery": null,
+    "deliveryMode": "livraison standard en point relais"
+  },
+  "section":[
+    "suivi de commande",
+    "informations sur la livraison",
+    "informations de paiement",
+    "total commande",
+    "besoin d'aide ?"
+  ]
+}
