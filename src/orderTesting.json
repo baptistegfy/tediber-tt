@@ -1,10 +1,10 @@
 {
   "order":{
-    "orderNumber": 405560003,
-    "OrderDate": "14/02/22",
-    "orderSubtotal": 1130,
-    "delivery": "gratuite",
-    "orderPrice": 1130,
+    "number": 405560003,
+    "date": "14/02/22",
+    "priceProduct": 1130,
+    "priceDelivery": "gratuite",
+    "price": 1130,
     "payment": "visa"
   },
   "tracking":{
@@ -41,14 +41,17 @@
     "address": "57 rue Jean Pierre Timbaud",
     "city": "Paris",
     "postcode": 75011,
-    "EstimatedDelivery": null,
+    "country": "France",
+    "client": "Geffroy Baptiste",
+    "phone": "0783965143",
+    "estimatedDelivery": null,
     "deliveryMode": "livraison standard en point relais"
   },
-  "section":[
-    "suivi de commande",
-    "informations sur la livraison",
-    "informations de paiement",
-    "total commande",
-    "besoin d'aide ?"
-  ]
+  "section":{
+    "tracking" : "suivi de commande",
+    "delivery" : "informations sur la livraison",
+    "payment" : "informations de paiement",
+    "total" : "total commande",
+    "help" : "besoin d'aide ?"
+  }
 }

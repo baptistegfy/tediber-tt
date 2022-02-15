@@ -13,6 +13,7 @@ export default {
   name: 'App',
   components: {
     Order,
+
   }
 }
 </script>
@@ -24,7 +25,12 @@ export default {
     padding: 0;
   }
 
+  .upper {
+    text-transform: uppercase;
+  }
+
   .header {
+    margin-bottom: 1rem;
     width: 100vw;
     height: 10vh;
     display: flex;
