@@ -1,37 +1,18 @@
 <template>
-
   <Separator :title="orderDB.section.tracking" />
+  <OrderInfos :dataProduct="dataProduct" :order="orderDB.order"/>
   <!--  -->
-  <!-- <Order /> -->
-    <div class="order--infos">
-      <p>N° de commande : {{orderDB.order.number}}</p>
-      <p>Date de commande : {{orderDB.order.date}}</p>
-      <br>
-      <hr>
-      <p>suivi commande</p>
-      <hr>
-      <p>informations sur les retours</p>
-      <hr>
-      <br>
-    </div>
-    <!--  -->
-    <div class="order--product">
-      <p class="numOfProduct">ARTICLES({{dataProduct.length}})</p>
-      <ProductCard v-for='(data, i) in dataProduct' :key='i' :productData='data'/>
-    </div>
-
-
   <Separator :title="orderDB.section.delivery" />
   <Delivery :data="orderDB.delivery" />
+  <!--  -->
   <Separator :title="orderDB.section.payment" />
   <Payment :data="orderDB.order" />
+  <!--  -->
   <Separator :title="orderDB.section.total" />
   <Total :data="orderDB.order" />
+  <!--  -->
   <Separator :title="orderDB.section.help" />
   <Help />
-
-
-
 </template>
 
 <script>
@@ -41,22 +22,21 @@ import { onMounted, ref } from '@vue/runtime-core'
 
 // COMPONENT
 import Separator from '../components/Separator.vue'
-import ProductCard from '../components/ProductCard.vue'
 import Delivery from '../components/Delivery.vue'
 import Payment from '../components/Payment.vue'
 import Total from '../components/Total.vue'
 import Help from '../components/Help.vue'
-
+import OrderInfos from '../components/OrderInfos.vue'
 
 export default {
   name:"Order",
   components: {
-    ProductCard,
     Separator,
     Delivery,
     Payment,
     Total,
     Help,
+    OrderInfos,
   },
   setup() {
     // PRODUCT
@@ -92,10 +72,5 @@ export default {
 </script>
 
 <style>
-.order--infos, .order--product {
-  width: 90vw;
-  margin: 0 auto;
-}
 
-/* @media screen and (min-width: 1000px){} */
 </style>

@@ -42,9 +42,6 @@ export default {
   props: {
     data: Object,
   },
-  setup(props) {
-    console.log(props)
-  }
 }
 
 </script>
@@ -74,6 +71,16 @@ export default {
 
   hr {
     margin: 1rem 0;
+  }
+}
+
+// DESKTOP
+@media screen and (min-width: 750px){
+  .delivery {
+    display: flex;
+    hr {
+      margin: 0 1rem
+    }
   }
 }
 </style>

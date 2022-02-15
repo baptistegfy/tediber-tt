@@ -1,17 +1,17 @@
 <template>
-  <header class="header">
-    <img src="./assets/tediber_logo.svg" class="header--logo">
-  </header>
+  <Header />
   <Order />
 </template>
 
 <script>
 //component
 import Order from './page/Order.vue'
+import Header from './components/Header.vue'
 
 export default {
   name: 'App',
   components: {
+    Header,
     Order,
 
   }
@@ -19,27 +19,13 @@ export default {
 </script>
 
 <style lang='scss'>
-  * {
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0;
+}
 
-  .upper {
-    text-transform: uppercase;
-  }
-
-  .header {
-    margin-bottom: 1rem;
-    width: 100vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.2);
-    &--logo {
-      height: 75%;
-    }
-  }
-
+.upper {
+  text-transform: uppercase;
+}
 </style>

@@ -43,4 +43,11 @@ export default {
   align-items: center;
   line-height: 2rem;
 }
+
+// DESKTOP
+@media screen and (min-width: 750px){
+  .total {
+    padding: 1rem 35%
+  }
+}
 </style>

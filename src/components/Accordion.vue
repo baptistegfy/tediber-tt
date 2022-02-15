@@ -1,16 +1,58 @@
 <template>
   <div class="accordion">
-    <p>{{title}}</p>
-    <img src="../assets/chevron-down.svg">
+    <div class="accordion--top" @click="toggleAccordion()">
+      <p>{{title}}</p>
+      <img src="../assets/chevron-down.svg">
+    </div>
+    <!--  -->
+    <div class="accordion--content" v-if="isOpen">
+      <span>
+        <img src="../assets/order_step_1.svg" alt="">
+        <input type="checkbox" name="" id="" checked>
+      </span>
+      <span>
+        <img src="../assets/order_step_2.svg" alt="">
+        <input type="checkbox" name="" id="" checked>
+      </span>
+      <span>
+        <img src="../assets/order_step_3.svg" alt="">
+        <input type="checkbox" name="" id="">
+      </span>
+      <span>
+        <img src="../assets/order_step_4.svg" alt="">
+        <input type="checkbox" name="" id="">
+      </span>
+    </div>
   </div>
 </template>
 
 <script>
+// import { ref } from 'vue'
 export default {
   name:"Accordion",
   props: {
     title: String,
-  }
+  },
+  data() {
+    return {
+      isOpen: false,
+    };
+  },
+  methods: {
+    toggleAccordion() {
+      this.isOpen = !this.isOpen;
+    },
+  },
+  // setup(/* props */) {
+  //   const thisAccordion = ref(props.title)
+  //   const isActive = false
+
+  //   const
+
+
+  //   RETURN
+  //   return {}
+  // }
 }
 </script>
 
@@ -20,11 +62,37 @@ export default {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  img {
-    height: 2rem;
-    padding: 0.25rem 0;
+  flex-direction: column;
+  &--top {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      height: 2rem;
+      padding: 0.25rem 0;
+    }
+  }
+  &--content {
+    display: flex;
+    // display: none;
+    justify-content: space-between;
+    margin-top: 1rem;
+    span {
+      width: 20%;
+      height: 8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      img {
+        max-width: 100%;
+        height: 4rem;
+      }
+      input {
+        margin-bottom: 1.5rem;
+      }
+    }
   }
 }
 </style>
