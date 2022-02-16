@@ -1,10 +1,9 @@
 <template>
   <div class="separator">
-    <hr>
-    <span class="separator--title">
-      <h3 class="upper">{{title}}</h3>
+    <div class="separator--title">
+      <h3 class="uppercase">{{title}}</h3>
       <img src="../assets/UI_zigzag.svg">
-    </span>
+    </div>
   </div>
 </template>
 
@@ -24,15 +23,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    hr {
-      height: 1px;
-      color: #000;
-      position: absolute;
-      top: 50%;
-      bottom: 50%;
-      left: 0;
-      right: 0;
-    }
   }
 
   .separator--title {
@@ -43,9 +33,31 @@
     background-color: #fff;
     z-index: 1;
     padding: 0 0.5rem;
+    margin: 1.8rem;
+    &::after {
+      border-bottom: 0.1rem solid #dedcdc;
+      content: " ";
+      display: block;
+      left: 0;
+      margin-left: -0.4rem;
+      margin-right: -0.4rem;
+      position: absolute;
+      top: 2.5rem;
+      width: calc(100% + 0.8rem);
+    }
 
     h3 {
+      font-weight: 400;
       margin-bottom: 0.5rem;
+      z-index: 1;
+      background: #fff;
+      padding: 0 1rem;
+    }
+  }
+
+  @media screen and (min-width: 750px){
+    .separator {
+      margin: 1.5rem 5%;
     }
   }
 </style>

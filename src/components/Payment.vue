@@ -2,7 +2,7 @@
   <div class="payment--wrapper">
     <div class="payment">
       <img src="../assets/UI_CB_visa.jpg">
-      <p class="upper">{{data.payment}}</p>
+      <p class="uppercase">{{data.payment}}</p>
     </div>
   </div>
 </template>

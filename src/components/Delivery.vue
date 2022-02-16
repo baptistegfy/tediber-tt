@@ -4,9 +4,9 @@
 
       <div class="delivery--address">
         <h3>ADRESSE DE COLLECTE</h3>
-        <p class="upper">{{data.type}}</p>
+        <p class="uppercase">{{data.type}}</p>
         <p>{{data.address}}</p>
-        <p class="upper">{{data.city}}</p>
+        <p class="uppercase">{{data.city}}</p>
         <p>{{data.postcode}}</p>
         <p>{{data.country}}</p>
       </div>
@@ -23,7 +23,7 @@
 
       <div class="delivery--estimated">
         <h3>LIVRAISON ESTIMÉE</h3>
-        <p>{{data.estimatedDelivery ? data.estimatedDelivery : "Pas d'éstimation pour le momment"}}</p>
+        <p>{{data.estimatedDelivery ? data.estimatedDelivery : "Pas d'estimation pour le momment"}}</p>
       </div>
 
       <hr>
@@ -59,6 +59,7 @@ export default {
   
   h3 {
     margin-bottom: 1rem;
+    font-weight: 400;
   }
 
   div {
@@ -78,6 +79,9 @@ export default {
 @media screen and (min-width: 750px){
   .delivery {
     display: flex;
+    div {
+      width: 25%;
+    }
     hr {
       margin: 0 1rem
     }

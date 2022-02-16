@@ -7,7 +7,7 @@
       </div>
       <div class="priceDelivery">
         <p>Livraison</p>
-        <p>{{data.priceDelivery}}</p>
+        <p class="uppercase">{{data.priceDelivery}}</p>
       </div>
       <div class="priceTotal">
         <p>Total</p>
@@ -47,7 +47,7 @@ export default {
 // DESKTOP
 @media screen and (min-width: 750px){
   .total {
-    padding: 1rem 35%
+    padding: 1rem 40%
   }
 }
 </style>

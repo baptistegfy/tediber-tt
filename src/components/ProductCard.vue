@@ -2,7 +2,7 @@
   <div class='product--card'>
     <div :style="{ 'background-image': 'url(' + require('../assets/' + productData.img) + ')' }" class="product--img" />
     <div class="product--info">
-      <h3 class='product--title'>{{productData.name}}</h3>
+      <h3 class="product--title uppercase">{{productData.name}}</h3>
       <p class="product--price">{{productData.price}}</p>
       <p class="product--size">TAILLE: {{productData.size}}</p>
       <p class="product--quantity">QTÉ: {{productData.quantity}}</p>
@@ -42,5 +42,9 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .product--title {
+    font-weight: 400;
   }
 </style>

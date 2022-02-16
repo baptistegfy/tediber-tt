@@ -11,13 +11,13 @@
       
       <ul class="left-desktop-nav">
         <li>
-          <a class="upper" href="#">NOS PRODUITS</a>
+          <a class="uppercase" href="#">NOS PRODUITS</a>
         </li>
         <li>
-          <a class="upper" href="#">LE CONCEPT</a>
+          <a class="uppercase" href="#">LE CONCEPT</a>
         </li>
         <li>
-          <a class="upper" href="#">AVIS</a>
+          <a class="uppercase" href="#">AVIS</a>
         </li>
       </ul>
 
@@ -25,16 +25,16 @@
 
       <ul class="right-desktop-nav">
         <li>
-          <a class="upper" href="#">PUB</a>
+          <a class="uppercase" href="#">PUB</a>
         </li>
         <li>
-          <a class="upper" href="#">MON COMPTE</a>
+          <a class="uppercase" href="#">MON COMPTE</a>
         </li>
         <li>
-          <a class="upper" href="#">MAG</a>
+          <a class="uppercase" href="#">MAG</a>
         </li>
         <li>
-          <a class="upper" href="#">CONTACTEZ-NOUS</a>
+          <a class="uppercase" href="#">CONTACTEZ-NOUS</a>
         </li>
       </ul>
 
@@ -44,27 +44,27 @@
     <div class="header--responsive" v-if="isOpen"> 
       <ul>
         <li>
-          <a class="upper" href="#">NOS PRODUITS</a>
+          <a class="uppercase" href="#">NOS PRODUITS</a>
         </li>
         <li>
-          <a class="upper" href="#">LE CONCEPT</a>
+          <a class="uppercase" href="#">LE CONCEPT</a>
         </li>
         <li>
-          <a class="upper" href="#">AVIS</a>
+          <a class="uppercase" href="#">AVIS</a>
         </li>
       </ul>
       <ul>
         <li>
-          <a class="upper" href="#">PUB</a>
+          <a class="uppercase" href="#">PUB</a>
         </li>
         <li>
-          <a class="upper" href="#">MON COMPTE</a>
+          <a class="uppercase" href="#">MON COMPTE</a>
         </li>
         <li>
-          <a class="upper" href="#">MAG</a>
+          <a class="uppercase" href="#">MAG</a>
         </li>
         <li>
-          <a class="upper" href="#">CONTACTEZ-NOUS</a>
+          <a class="uppercase" href="#">CONTACTEZ-NOUS</a>
         </li>
       </ul>
     </div>
@@ -132,7 +132,8 @@ export default {
     padding: 1rem;
     ul {
       list-style: none;
-      li {  
+      li { 
+        margin: 1rem 0;
         a {
           text-decoration: none;
           color: #000;
