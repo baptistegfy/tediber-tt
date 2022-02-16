@@ -1,99 +1,185 @@
 <template>
   <header class="header">
-    <button class="header--burger">btn</button>
-    <img src="../assets/tediber_logo.svg" alt="tediber">
-    <img class="ours" src="../assets/ours.svg" alt="">
-    <ul class="left">
-      <li>
-        <a class="upper" href="#">nos produits</a>
-      </li>
-      <li>
-        <a class="upper" href="#">le concept</a>
-      </li>
-      <li>
-        <a class="upper" href="#">avis</a>
-      </li>
-    </ul>
-    <ul class="right">
-      <li>
-        <a class="upper" href="#">pub</a>
-      </li>
-      <li>
-        <a class="upper" href="#">mon compte</a>
-      </li>
-      <li>
-        <a class="upper" href="#">mag</a>
-      </li>
-      <li>
-        <a class="upper" href="#">contactez-nous</a>
-      </li>
-    </ul>
-    <img src="../assets/panier.svg" alt="">
+    <div class="header--top">
+      <button class="header--burger" @click="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <img class="header--tediber" src="../assets/tediber_logo.svg" alt="tediber">
+
+      <ul class="left-desktop-nav">
+        <li>
+          <a class="uppercase" href="#">NOS PRODUITS</a>
+        </li>
+        <li>
+          <a class="uppercase" href="#">LE CONCEPT</a>
+        </li>
+        <li>
+          <a class="uppercase" href="#">AVIS</a>
+        </li>
+      </ul>
+
+      <img class="header--ours" src="../assets/ours.svg" alt="">
+
+      <ul class="right-desktop-nav">
+        <li>
+          <a class="uppercase" href="#">PUB</a>
+        </li>
+        <li>
+          <a class="uppercase" href="#">MON COMPTE</a>
+        </li>
+        <li>
+          <a class="uppercase" href="#">MAG</a>
+        </li>
+        <li>
+          <a class="uppercase" href="#">CONTACTEZ-NOUS</a>
+        </li>
+      </ul>
+
+      <img class="header--basket" src="../assets/panier.svg" alt="">
+    </div>
+    
+    <div class="header--responsive" v-if="isOpen">
+      <ul>
+        <li>
+          <a class="uppercase" href="#">NOS PRODUITS</a>
+        </li>
+        <li>
+          <a class="uppercase" href="#">LE CONCEPT</a>
+        </li>
+        <li>
+          <a class="uppercase" href="#">AVIS</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a class="uppercase" href="#">PUB</a>
+        </li>
+        <li>
+          <a class="uppercase" href="#">MON COMPTE</a>
+        </li>
+        <li>
+          <a class="uppercase" href="#">MAG</a>
+        </li>
+        <li>
+          <a class="uppercase" href="#">CONTACTEZ-NOUS</a>
+        </li>
+      </ul>
+    </div>
   </header>
 </template>
 
 <script>
-export default {
-
-}
+  export default {
+    name: 'Header',
+    data() {
+      return {
+        isOpen: false
+      }
+    },
+    methods: {
+      toggleNav() {
+        this.isOpen = !this.isOpen
+      }
+    }
+  }
 </script>
 
 <style lang='scss'>
   .header {
+    background: #fff;
+    z-index: 10;
     position: relative;
-    height: 80px;
-    padding: 1rem;
+    width: 100vw;
+    box-shadow: 0px 2px 9px rgba(0, 0, 9px, 0.3);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 2px 9px rgba(0,0,9px,0.3);
-    &--burger {
+    flex-direction: column;
+
+    .left-desktop-nav,
+    .right-desktop-nav,
+    .header--ours {
       display: none;
     }
-    img {
-      max-height: 100%;
-    }
-    ul {
+
+    &--top {
+      padding: 1rem;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      list-style: none;
-      height: 100%;
-      li {
-        margin: 0 0.5rem;
-        // height: 100%;
-        a {
-          text-decoration: none;
-          color: #000;
+
+      .header--burger {
+        height: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: none;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+
+        span {
+          width: 2rem;
+          height: 2px;
+          border: 1px solid black;
+          margin: 0.25rem;
+        }
+      }
+
+      img {
+        max-width: 5rem;
+        max-height: 100%;
+      }
+    }
+
+    &--responsive {
+      padding: 1rem;
+
+      ul {
+        list-style: none;
+
+        li {
+          margin: 1rem 0;
+
+          a {
+            text-decoration: none;
+            color: #000;
+          }
         }
       }
     }
   }
-  .left {
-    position: absolute;
-    left: 0;
-  }
-  .right {
-    position: absolute;
-    right: 0;
-  }
-  .ours {
-    height: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-  }
-  // DESKTOP
-  @media screen and (min-width: 850px){
-  .ours {
-    display: none;
-  }
-  ul {
-    visibility: hidden;
-  }
-  .header {
-    &--burger {
-      display: block;
+
+  @media screen and (min-width: 1050px) {
+    .header {
+      .header--ours {
+        display: block;
+      }
+
+      &--responsive {
+        display: none;
+      }
+
+      .left-desktop-nav,
+      .right-desktop-nav {
+        width: 400px;
+        display: flex;
+        list-style: none;
+
+        li {
+          a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 0.5rem;
+          }
+        }
+      }
+    }
+
+    .header--top .header--burger {
+      display: none;
     }
   }
-}
 </style>
