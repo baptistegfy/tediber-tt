@@ -1,6 +1,6 @@
 <template>
   <div class='product--card'>
-    <div :style="changeBg" class="product--img"></div>
+    <img class="product--img" :src="productData.img" />
     <div class="product--info">
       <h3 class='product--title'>{{productData.name}}</h3>
       <p class="product--price">{{productData.price}}</p>
@@ -20,10 +20,10 @@ export default {
     productData: Object
   },
   setup(props) {
-    // console.log(props.productData.img)
+    console.log(props.productData.img)
     const changeBg = computed(() => {
       return {
-        backgroundImage: `url(${props.productData.img}`
+        backgroundImage: `url(../assets/${props.productData.img})`
       }
     })
     return {
@@ -46,9 +46,9 @@ export default {
     width: 116px;
     height: 103px;
     margin-right: 1rem;
-    background-size: cover;
-    background-position: center;
-    background-image: url('../assets/Tediber-mattress.jpg');
-    background-color: #C4C4C4;
+    // background-size: cover;
+    // background-position: center;
+    // background-image: url('../assets/Tediber-mattress.jpg');
+    // background-color: #C4C4C4;
   }
 </style>
