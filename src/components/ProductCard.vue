@@ -1,6 +1,6 @@
 <template>
   <div class='product--card'>
-    <img class="product--img" :src="productData.img" />
+    <div :style="{ 'background-image': 'url(' + require('../assets/' + productData.img) + ')' }" class="product--img" />
     <div class="product--info">
       <h3 class='product--title'>{{productData.name}}</h3>
       <p class="product--price">{{productData.price}}</p>
@@ -12,24 +12,12 @@
 
 <script>
 // IMPORT 
-import { computed } from 'vue'
 
 export default {
   name: 'ProductCard',
   props: {
     productData: Object
   },
-  setup(props) {
-    console.log(props.productData.img)
-    const changeBg = computed(() => {
-      return {
-        backgroundImage: `url(../assets/${props.productData.img})`
-      }
-    })
-    return {
-    changeBg
-    }
-  }
 }
 </script>
 
@@ -46,9 +34,13 @@ export default {
     width: 116px;
     height: 103px;
     margin-right: 1rem;
-    // background-size: cover;
-    // background-position: center;
-    // background-image: url('../assets/Tediber-mattress.jpg');
-    // background-color: #C4C4C4;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .product--info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 </style>
