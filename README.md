@@ -1,24 +1,29 @@
-# tediber-tt
+# Test technique pour l'entreprise Tediber
 
-## Project setup
-```
-npm install
-```
+Intégration d'une page avec le framework VusJs 3
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Lien du projet : https://baptiste-gfy.github.io/tediber-tt/
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
