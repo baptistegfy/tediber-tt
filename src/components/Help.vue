@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import Accordion from './Accordion.vue'
+  import Accordion from './Accordion.vue'
 
-export default {
-  name:"Help",
-  components:{
-    Accordion,
+  export default {
+    name: "Help",
+    components: {
+      Accordion,
+    }
   }
-}
 </script>
 
 <style lang='scss'>
@@ -25,8 +25,8 @@ export default {
     width: 90vw;
     margin: 0 auto 2rem auto;
   }
-  
+
   .help--wrapper:last-child {
-    border-bottom: 1px solid $primary-color; 
+    border-bottom: 1px solid $primary-color;
   }
 </style>

@@ -1,5 +1,5 @@
 {
-  "order":{
+  "order": {
     "number": 405560003,
     "date": "14/02/22",
     "priceProduct": 1130,
@@ -7,14 +7,13 @@
     "price": 1130,
     "payment": "visa"
   },
-  "tracking":{
-    "step1":true,
-    "step2":true,
-    "step3":false,
-    "step4":false
+  "tracking": {
+    "step1": true,
+    "step2": true,
+    "step3": false,
+    "step4": false
   },
-  "product":[
-    {
+  "product": [{
       "name": "L'incroyable matelas tediber",
       "img": "Tediber-mattress.jpg",
       "price": "750 €",
@@ -36,7 +35,7 @@
       "quantity": "1"
     }
   ],
-  "delivery":{
+  "delivery": {
     "type": "point relais",
     "address": "57 rue Jean Pierre Timbaud",
     "city": "Paris",
@@ -47,11 +46,11 @@
     "estimatedDelivery": null,
     "deliveryMode": "Livraison standard en point relais"
   },
-  "section":{
-    "tracking" : "suivi de commande",
-    "delivery" : "informations sur la livraison",
-    "payment" : "informations de paiement",
-    "total" : "total commande",
-    "help" : "besoin d'aide ?"
+  "section": {
+    "tracking": "suivi de commande",
+    "delivery": "informations sur la livraison",
+    "payment": "informations de paiement",
+    "total": "total commande",
+    "help": "besoin d'aide ?"
   }
 }

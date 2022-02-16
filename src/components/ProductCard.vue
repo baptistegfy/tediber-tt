@@ -11,14 +11,12 @@
 </template>
 
 <script>
-// IMPORT 
-
-export default {
-  name: 'ProductCard',
-  props: {
-    productData: Object
-  },
-}
+  export default {
+    name: 'ProductCard',
+    props: {
+      productData: Object
+    },
+  }
 </script>
 
 <style lang='scss'>
@@ -27,7 +25,7 @@ export default {
     width: 100%;
     margin: 0.75rem auto;
     padding: 0.5rem;
-    box-shadow: 0px 2px 9px rgba(0,0,9px,0.3);
+    box-shadow: 0px 2px 9px rgba(0, 0, 9px, 0.3);
   }
 
   .product--img {

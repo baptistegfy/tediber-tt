@@ -9,7 +9,7 @@
 
 <script>
   export default {
-    name:"Separateur",
+    name: "Separateur",
     props: {
       title: String,
     }
@@ -19,14 +19,14 @@
 <style lang='scss'>
   .separator {
     margin: 1.5rem 0;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
   }
 
   .separator--title {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -34,6 +34,7 @@
     z-index: 1;
     padding: 0 0.5rem;
     margin: 1.8rem;
+
     &::after {
       border-bottom: 0.1rem solid #dedcdc;
       content: " ";
@@ -55,7 +56,7 @@
     }
   }
 
-  @media screen and (min-width: 750px){
+  @media screen and (min-width: 750px) {
     .separator {
       margin: 1.5rem 5%;
     }
