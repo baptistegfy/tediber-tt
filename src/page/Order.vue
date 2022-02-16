@@ -1,6 +1,6 @@
 <template>
   <Separator :title="orderDB.section.tracking" />
-  <OrderInfos :dataProduct="dataProduct" :order="orderDB.order"/>
+  <OrderInfos :dataProduct="dataProduct" :order="orderDB.order" :tracking="orderDB.tracking" />
   <!--  -->
   <Separator :title="orderDB.section.delivery" />
   <Delivery :data="orderDB.delivery" />

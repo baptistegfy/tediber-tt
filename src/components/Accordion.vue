@@ -7,20 +7,24 @@
     <!--  -->
     <div class="accordion--content" v-if="isOpen && content === 'tracking'">
       <span>
-        <img src="../assets/order_step_1.svg" alt="">
-        <input type="checkbox" name="" id="" checked>
+        <img class="accordion--icon" src="../assets/order_step_1.svg" alt="">
+        <img class="accordion--checkbox" :src="require('../assets/checked-checkbox.svg')" v-if="tracking.step1 === true"/>
+        <img class="accordion--checkbox" :src="require('../assets/checkbox.svg')" v-else />
       </span>
       <span>
-        <img src="../assets/order_step_2.svg" alt="">
-        <input type="checkbox" name="" id="" checked>
+        <img class="accordion--icon" src="../assets/order_step_2.svg" alt="">
+        <img class="accordion--checkbox" :src="require('../assets/checked-checkbox.svg')" v-if="tracking.step2 === true"/>
+        <img class="accordion--checkbox" :src="require('../assets/checkbox.svg')" v-else />
       </span>
       <span>
-        <img src="../assets/order_step_3.svg" alt="">
-        <input type="checkbox" name="" id="">
+        <img class="accordion--icon" src="../assets/order_step_3.svg" alt="">
+        <img class="accordion--checkbox" :src="require('../assets/checked-checkbox.svg')" v-if="tracking.step3 === true"/>
+        <img class="accordion--checkbox" :src="require('../assets/checkbox.svg')" v-else />
       </span>
       <span>
-        <img src="../assets/order_step_4.svg" alt="">
-        <input type="checkbox" name="" id="">
+        <img class="accordion--icon" src="../assets/order_step_4.svg" alt="">
+        <img class="accordion--checkbox" :src="require('../assets/checked-checkbox.svg')" v-if="tracking.step4 === true"/>
+        <img class="accordion--checkbox" :src="require('../assets/checkbox.svg')" v-else />
       </span>
     </div>
     <div class="accordion--content" v-if="isOpen && content === 'something'">
@@ -35,6 +39,7 @@
     props: {
       title: String,
       content: String,
+      tracking: Object
     },
     data() {
       return {
@@ -46,6 +51,9 @@
         this.isOpen = !this.isOpen;
       },
     },
+    // setup(props) {
+    //   console.log(props.tracking.step1)
+    // }
   }
 </script>
 
@@ -80,18 +88,19 @@
         line-height: 1.5;
       }
       span {
+        margin-bottom: 1.5rem;
         width: 20%;
         height: 8rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        img {
+        .accordion--icon {
           max-width: 100%;
           height: 4rem;
         }
-        input {
-          margin-bottom: 1.5rem;
+        .accordion-checkbox {
+          height: 2rem;
         }
       }
     }

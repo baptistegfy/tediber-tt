@@ -6,7 +6,7 @@
         <p>Date de commande : {{order.date}}</p>
       </div>
 
-      <Accordion title="Suivi commande" content='tracking' />
+      <Accordion title="Suivi commande" content='tracking' :tracking="tracking" />
       <Accordion title="Informations sur les retours" content='something' />
     </div>
     <!--  -->
@@ -29,7 +29,9 @@ export default {
   },
   props: {
     dataProduct: Array,
-    order: Object
+    order: Object,
+    tracking: Object,
+
   }
 }
 </script>
