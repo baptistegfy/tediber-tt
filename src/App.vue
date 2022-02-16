@@ -13,7 +13,6 @@ export default {
   components: {
     Header,
     Order,
-
   }
 }
 </script>
